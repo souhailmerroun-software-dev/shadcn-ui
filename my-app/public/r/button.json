@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "button",
+  "type": "registry:block",
+  "title": "Button",
+  "description": "Just a button",
+  "dependencies": [],
+  "files": [
+    {
+      "path": "registry/akeneo/button/button.tsx",
+      "content": "export function HelloWorld() {\n  return <button>button</button>\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}
