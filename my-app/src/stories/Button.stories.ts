@@ -1,33 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
 import { HelloWorld } from '../../registry/akeneo/pink-button/pink-button';
 
-// Meta configuration for the HelloWorld component
-const meta: Meta<typeof HelloWorld> = {
+// Storybook meta configuration
+const meta = {
   title: 'Components/HelloWorld',
   component: HelloWorld,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-};
+  argTypes: {
+    onClick: { action: 'clicked' },
+  },
+  args: { onClick: fn() },
+} satisfies Meta<typeof HelloWorld>;
 
 export default meta;
-type Story = StoryObj<typeof HelloWorld>;
+type Story = StoryObj<typeof meta>;
 
-// Default HelloWorld story
-export const Default: Story = {};
-
-// A variant with centered text
-export const CenteredButton: Story = {
-  parameters: {
-    layout: 'centered',
-  },
+// Primary Story
+export const Default: Story = {
+  args: {},
 };
-
-// A variant for testing long text
-export const LongTextButton: Story = {
-  render: () => (
-    <HelloWorld />
-  ),
-};
-
