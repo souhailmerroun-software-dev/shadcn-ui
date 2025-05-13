@@ -4,13 +4,13 @@
   "homepage": "https://acme.com",
   "items": [
     {
-      "name": "button",
+      "name": "pink-button",
       "type": "registry:block",
-      "title": "Button",
-      "description": "Just a button",
+      "title": "Button but Pink",
+      "description": "Just a button that is pink",
       "files": [
         {
-          "path": "registry/akeneo/button/button.tsx",
+          "path": "registry/akeneo/pink-button/pink-button.tsx",
           "type": "registry:component"
         }
       ]
